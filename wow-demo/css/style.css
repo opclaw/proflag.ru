@@ -66,7 +66,25 @@ h2 .accent-text{background:var(--grad);-webkit-background-clip:text;background-c
 .hero-stats b{font-size:clamp(28px,3.4vw,44px);font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero-stats span{font-size:13px;color:var(--mut)}
 .scroll-hint{margin-top:54px;color:var(--dim);font-size:13px;letter-spacing:.14em;text-transform:uppercase;animation:hint 2.2s ease-in-out infinite}
+.scroll-hint .arrow{display:inline-block;margin-left:6px}
 @keyframes hint{0%,100%{transform:translateY(0);opacity:.7}50%{transform:translateY(8px);opacity:1}}
+
+/* доступность с клавиатуры */
+.dots button:focus-visible,.contact-chip:focus-visible,.c-phone:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:8px}
+
+/* низкие экраны (ноутбуки 1366×768 и меньше) — уплотняем вертикаль */
+@media(max-height:840px){
+  .slide{padding:36px 24px}
+  h2{font-size:clamp(24px,3vw,36px);margin-bottom:10px}
+  .lead{margin-bottom:20px}
+  .hero-stats{margin-top:26px}
+  .scroll-hint{margin-top:30px}
+  .verdict{margin-top:18px;padding:16px 20px}
+  .ba-legend{margin-top:12px}
+  .foot-note{margin-top:16px}
+  .final-cta{margin-top:22px}
+  .contacts{margin-top:24px}
+}
 
 /* ============ CARDS ============ */
 .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -146,7 +164,7 @@ h2 .accent-text{background:var(--grad);-webkit-background-clip:text;background-c
 @media(max-width:760px){.vs-row{grid-template-columns:1fr;gap:8px;padding:14px 16px}}
 
 /* ============ BEFORE / AFTER ============ */
-.ba{position:relative;aspect-ratio:16/9;border-radius:20px;overflow:hidden;border:1px solid #26324f;box-shadow:0 30px 80px rgba(0,0,0,.5);touch-action:none;cursor:ew-resize;user-select:none;background:#101828}
+.ba{position:relative;aspect-ratio:16/9;border-radius:20px;overflow:hidden;border:1px solid #26324f;box-shadow:0 30px 80px rgba(0,0,0,.5);touch-action:none;cursor:ew-resize;user-select:none;background:#101828;width:min(100%,calc((100svh - 330px)*16/9));margin:0 auto}
 .ba-layer{position:absolute;inset:0;background:#101828}
 .ba-after{clip-path:inset(0 0 0 var(--pos,50%))}
 .ba-handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.25),0 0 22px rgba(0,0,0,.5);z-index:9}
