@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PROFLAG · Точка роста — аудит сайта и стратегия продаж</title>
+<meta name="description" content="Интерактивная презентация: почему сайт proflag.ru теряет продажи и план роста на 90 дней">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="progress"><i id="progressBar"></i></div>
+<nav class="dots" id="dots" aria-label="Навигация по слайдам"></nav>
+
+<a class="contact-chip" href="tel:+79250909500">Вопросы? <b>+7 925 090-95-00</b></a>
+
+<main id="deck">
+
+<!-- ================= 1. HERO ================= -->
+<section class="slide hero" data-dot="Старт">
+  <canvas id="flagCanvas" aria-hidden="true"></canvas>
+  <div class="hero-content">
+    <div class="kicker rv" style="--d:.05s">SEO-аудит · маркетинг · стратегия роста</div>
+    <h1 class="hero-title rv" style="--d:.15s">PROFLAG<span class="accent">точка роста продаж</span></h1>
+    <p class="hero-sub rv" style="--d:.3s">Производство работает 21 год, клиенты его любят.<br>Проблема в том, что <b>сайт приводит клиентов к конкурентам</b>.<br>Вот доказательства — и план, как развернуть ситуацию за 90 дней.</p>
+    <div class="hero-stats rv" style="--d:.45s">
+      <div><b data-count="21">0</b><span>лет на рынке</span></div>
+      <div><b data-count="75" data-suffix=" 000">0</b><span>изделий в месяц</span></div>
+      <div><b data-count="5" data-suffix=" ч">0</b><span>и флаг готов</span></div>
+      <div><b data-count="4" data-prefix="×">0</b><span>трафик за 12 мес</span></div>
+    </div>
+    <div class="scroll-hint rv" style="--d:.7s">Листайте вниз <span class="arrow">↓</span></div>
+  </div>
+</section>
+
+<!-- ================= 2. ДИАГНОЗ ================= -->
+<section class="slide" data-dot="Диагноз">
+  <div class="wrap">
+    <h2 class="rv">Диагноз за 30 секунд</h2>
+    <p class="lead rv" style="--d:.1s">Сайт проигрывает по измеримым факторам ранжирования — при том, что производство сильнее половины конкурентов из топ-5.</p>
+    <div class="cards3">
+      <div class="card stat rv" style="--d:.15s">
+        <div class="num"><b data-count="290">0</b><span class="trend down">−64 за месяц</span></div>
+        <h3>Страниц в индексе Яндекса</h3>
+        <p>У лидера ниши megaflag.ru — <b>1 385</b> страниц и рост. Ваш индекс тает: шаблонные дубли и тонкие страницы постранично выкидываются из выдачи.</p>
+      </div>
+      <div class="card stat rv" style="--d:.28s">
+        <div class="num"><b data-count="270">0</b><span class="trend">у конкурента — 360</span></div>
+        <h3>ИКС Яндекса</h3>
+        <p>Качество домена ниже лидера. Причина не в возрасте (вам 21 год против его 17), а в контенте, скорости и ссылках.</p>
+      </div>
+      <div class="card stat rv" style="--d:.41s">
+        <div class="num"><b data-count="358">0</b><small>КБ</small><span class="trend down">в 5× тяжелее</span></div>
+        <h3>Вес главной страницы</h3>
+        <p>У конкурента — 72 КБ и отдача ~0,8 сек. У вас ~3 сек. Мобильный клиент уходит, Яндекс видит это и понижает в выдаче.</p>
+      </div>
+    </div>
+    <div class="verdict rv" style="--d:.55s">
+      <span class="v-icon">⚡</span>
+      <p><b>Вывод:</b> проблема не в «плохих продажах». Проблема в том, что сайт технически устарел и не отвечает на главный вопрос покупателя — <b>«сколько стоит и как быстро?»</b>. Это исправимо.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. ПРОБЛЕМЫ ================= -->
+<section class="slide" data-dot="5 проблем">
+  <div class="wrap">
+    <h2 class="rv">5 проблем, которые сливают клиентов <span class="accent-text">прямо сейчас</span></h2>
+    <div class="prob-grid">
+
+      <div class="card prob rv" style="--d:.1s">
+        <div class="p-num">1</div>
+        <h3>Пункт меню ведёт в никуда</h3>
+        <div class="win mini">
+          <div class="win-bar"><i class="d r"></i><i class="d y"></i><i class="d g"></i><span class="url">print.proflag.ru</span></div>
+          <div class="win-body err">
+            <b>Сайт размещен некорректно</b>
+            <span>Эта ошибка возникает, если сайт неверно размещён в панели управления</span>
+            <em>server14.hosting.reg.ru</em>
+          </div>
+        </div>
+        <p>«Печать на ткани» — раздел из главного меню. Каждый клик по нему = потерянный лид. Так уже давно.</p>
+      </div>
+
+      <div class="card prob rv" style="--d:.2s">
+        <div class="p-num">2</div>
+        <h3>Все фото закрыты от роботов</h3>
+        <div class="code">
+          <span class="ln">User-agent: *</span>
+          <span class="ln bad">Disallow: /images/   ← все фото продукции</span>
+          <span class="ln bad">Disallow: /privacy-policy</span>
+          <span class="ln bad">Disallow: *?*        ← вся пагинация</span>
+        </div>
+        <p>Флаг — визуальный товар. Поиск по картинкам (Яндекс.Картинки, Google Images) полностью отдан конкурентам.</p>
+      </div>
+
+      <div class="card prob rv" style="--d:.3s">
+        <div class="p-num">3</div>
+        <h3>Индексация тает на глазах</h3>
+        <div class="big-trend">290 <span class="down">↓ −64</span></div>
+        <p>страниц в Яндексе и падение −64 за месяц. Причина — шаблонные тексты-дубли на ~100 категориях и «тонкие» страницы портфолио. Яндекс пессимизирует, Google пока терпит.</p>
+      </div>
+
+      <div class="card prob rv" style="--d:.4s">
+        <div class="p-num">4</div>
+        <h3>Нет цен — нет покупок</h3>
+        <div class="serp-mock">
+          <div class="serp-row"><b>Флаг "Знамя Победы" 90×135</b><span class="price">291 ₽ · 6 429 шт в наличии</span></div>
+          <div class="serp-row"><b>Флаг России (90×135)</b><span class="price">770–900 ₽ · купить</span></div>
+          <div class="serp-row you"><b>proflag.ru</b><span>«Рассчитаем за 15 минут…»</span></div>
+        </div>
+        <p>По запросу «флаг россии купить» топ занимают магазины с ценой и наличием. Вас в этой выдаче нет по определению.</p>
+      </div>
+
+      <div class="card prob wide rv" style="--d:.5s">
+        <div class="p-num">5</div>
+        <h3>Доверие не подтверждено</h3>
+        <div class="trust-row">
+          <span>❌ Нет ИНН/ОГРН на сайте</span>
+          <span>❌ Домен оформлен на «частное лицо»</span>
+          <span>❌ 0 Open Graph тегов</span>
+          <span>❌ Битые фото в портфолио</span>
+          <span>❌ CTA на личный мобильный</span>
+        </div>
+        <p>Клиент с чеком 300 000 ₽ проверяет сайт перед звонком. Сейчас сайт выглядит слабее, чем само производство. Госзаказчики — тем более.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. КОНКУРЕНТЫ ================= -->
+<section class="slide" data-dot="Конкуренты">
+  <div class="wrap">
+    <h2 class="rv">Почему конкуренты выше <span class="muted">— не потому что флаги лучше</span></h2>
+    <p class="lead rv" style="--d:.1s">Сравнение с megaflag.ru (лидер ниши). Ни одна строка не отыгрывается качеством печати — только «упаковкой» сайта.</p>
+    <div class="vs-table rv" style="--d:.2s">
+
+      <div class="vs-row head"><span>Фактор</span><span class="you">PROFLAG</span><span class="them">MEGAFLOG*</span></div>
+      <div class="vs-row">
+        <span>Страниц в индексе Яндекса</span>
+        <div class="bars"><div class="bar you"><i style="--w:21%"></i><em>290</em></div><div class="bar them"><i style="--w:100%"></i><em>1 385</em></div></div>
+      </div>
+      <div class="vs-row">
+        <span>ИКС Яндекса</span>
+        <div class="bars"><div class="bar you"><i style="--w:75%"></i><em>270</em></div><div class="bar them"><i style="--w:100%"></i><em>360</em></div></div>
+      </div>
+      <div class="vs-row">
+        <span>Вес главной страницы</span>
+        <div class="bars"><div class="bar you bad"><i style="--w:100%"></i><em>358 КБ</em></div><div class="bar them"><i style="--w:20%"></i><em>72 КБ</em></div></div>
+      </div>
+      <div class="vs-row flag-row">
+        <span>Цены на товарных карточках</span>
+        <div class="marks"><span class="you">нет</span><span class="them">есть</span></div>
+      </div>
+      <div class="vs-row flag-row">
+        <span>Онлайн-конструктор флагов</span>
+        <div class="marks"><span class="you">нет</span><span class="them">есть</span></div>
+      </div>
+      <div class="vs-row flag-row">
+        <span>Микроразметка Product (цена в сниппете)</span>
+        <div class="marks"><span class="you">нет</span><span class="them">есть</span></div>
+      </div>
+    </div>
+    <p class="foot-note rv" style="--d:.35s">* megaflag.ru, данные be1.ru на 22.09.2026. Козырь PROFLAG, которого нет у них: <b>образец за 1 час и тираж от 5 часов</b> — но об этом на сайте не написано ни в одном заголовке.</p>
+  </div>
+</section>
+
+<!-- ================= 5. ДО / ПОСЛЕ ================= -->
+<section class="slide" data-dot="До / После">
+  <div class="wrap wide-wrap">
+    <h2 class="rv">Первый экран: сейчас и <span class="accent-text">концепт</span></h2>
+    <p class="lead rv" style="--d:.1s">Потяните ползунок. Слева — текущий первый экран proflag.ru (реконструкция по живой странице), справа — концепт главной.</p>
+
+    <div class="ba rv" id="baSlider" style="--d:.2s">
+      <div class="ba-layer ba-before">
+        <div class="fit"><div class="mock mock-before">
+          <div class="ob-body">
+
+            <!-- шапка -->
+            <div class="ob-top">
+              <span class="ob-logo">ProФЛАГ</span>
+              <span class="ob-slogan">Производственная компания текстильной продукции</span>
+              <span class="ob-tel">+7 (495) 128-10-18</span>
+              <span class="ob-cta">Оставить заявку</span>
+            </div>
+
+            <!-- герой: текст + 4 круга -->
+            <div class="ob-hero">
+              <div class="ob-left">
+                <div class="ob-h1">Производим текстильную продукцию по вашим эскизам и доставляем по всему миру</div>
+                <span class="ob-btn">Оставить заявку</span>
+                <div class="ob-note">Оставьте заявку и мы <b>рассчитаем за 15 минут</b> стоимость заказа</div>
+              </div>
+              <div class="ob-circles">
+                <div class="ob-circ"><img src="img/prod-rf.jpg" alt=""><span>Флаги</span></div>
+                <div class="ob-circ"><img src="img/prod-banner.jpg" alt=""><span>Баннеры</span></div>
+                <div class="ob-circ"><img src="img/prod-pillow.jpg" alt=""><span>Подушки</span></div>
+                <div class="ob-circ"><img src="img/prod-tshirt.jpg" alt=""><span>Одежда</span></div>
+              </div>
+            </div>
+
+            <!-- цифры -->
+            <div class="ob-stats">
+              <div><b>20 лет</b><span>на рынке</span></div>
+              <div><b>1 час</b><span>опытный образец</span></div>
+              <div><b>75 000</b><span>товаров в месяц</span></div>
+              <div><b>Доставка</b><span>в любую точку мира</span></div>
+              <div><b>Своё</b><span>производство</span></div>
+            </div>
+
+            <!-- популярная продукция -->
+            <div class="ob-pop">
+              <div class="ob-head">Популярная продукция <em>ВСЯ ПРОДУКЦИЯ</em></div>
+              <div class="ob-row">
+                <div class="ob-card"><img src="img/prod-rf.jpg" alt=""><b>Флаги</b><span>Заказать</span></div>
+                <div class="ob-card"><img src="img/prod-victory.jpg" alt=""><b>Знамена</b><span>Заказать</span></div>
+                <div class="ob-card"><img src="img/prod-tshirt.jpg" alt=""><b>Одежда</b><span>Заказать</span></div>
+                <div class="ob-card"><img src="img/prod-pillow.jpg" alt=""><b>Для интерьера</b><span>Заказать</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- поп-ап -->
+          <div class="ob-overlay">
+            <div class="ob-modal">
+              <span class="ob-x">×</span>
+              <b>Оставить заявку</b>
+              <span class="ob-in">Ваше имя</span>
+              <span class="ob-in">Номер телефона</span>
+              <span class="ob-in">E-mail</span>
+              <span class="ob-in area">Сообщение</span>
+              <span class="ob-agree"><i></i>Соглашаюсь с обработкой персональных данных</span>
+              <span class="ob-send">Сделать заказ</span>
+            </div>
+          </div>
+
+          <div class="pin pin-red" style="left:44px;top:430px">Ни одной цены — только «Заказать»</div>
+          <div class="pin pin-red" style="left:792px;top:150px">Поп-ап встречает посетителя</div>
+        </div></div>
+      </div>
+
+      <div class="ba-layer ba-after">
+        <div class="fit"><div class="mock mock-after">
+          <div class="oa-body">
+            <img class="oa-photo" src="img/hero-flags.jpg" alt="">
+            <div class="oa-grad"></div>
+            <div class="oa-top">
+              <span class="oa-logo">
+                <svg class="oa-mark" viewBox="0 0 22 26" aria-hidden="true"><path d="M3 2 C 9 0, 14 4, 20 2 L 20 12 C 14 14, 9 10, 3 12 Z" fill="#f4f6fb"/><path d="M3 6 C 9 4, 14 8, 20 6 L 20 9 C 14 11, 9 7, 3 9 Z" fill="#2e5fa3" opacity=".001"/><rect x="1.4" y="1" width="1.7" height="24" rx=".8" fill="#8fa0c2"/></svg>
+                Pro<i>ФЛАГ</i>
+              </span>
+              <span class="oa-nav">Каталог · <b>Цены</b> · Доставка · Госзаказ · Кейсы</span>
+              <span class="oa-phone">8 800 100-10-18</span>
+              <span class="oa-cta">Рассчитать заказ</span>
+            </div>
+            <div class="oa-mid">
+              <span class="oa-tag"><b>★</b> 4,9 на Яндекс.Картах&nbsp;&nbsp;·&nbsp;&nbsp;21 год производства&nbsp;&nbsp;·&nbsp;&nbsp;44-ФЗ</span>
+              <div class="oa-h1">Флаги на заказ<br>с логотипом</div>
+              <div class="oa-sub">Сублимационная печать · пошив · вышивка — полный цикл в Москве</div>
+              <div class="oa-badges"><span>Образец за 1 час</span><span class="hot">Тираж от 5 часов</span><span>от 950 ₽/м²</span></div>
+            </div>
+          </div>
+
+          <div class="oa-calc">
+            <div class="oa-calc-head">Калькулятор <i>· 15 секунд</i></div>
+            <div class="oa-line"><span>Тип</span><em>Флаг с логотипом</em></div>
+            <div class="oa-line"><span>Размер</span><em>90×135 см</em></div>
+            <div class="oa-line"><span>Тираж</span><em>10 шт</em></div>
+            <div class="oa-line total"><span>Итого</span><em>11 500 ₽</em></div>
+            <span class="oa-send">Прикрепить макет и заказать</span>
+          </div>
+
+          <div class="oa-cards">
+            <div class="oa-card"><img src="img/prod-rf.jpg" alt=""><b>Флаг РФ 90×135</b><span>1 150 ₽</span><em>В наличии</em></div>
+            <div class="oa-card"><img src="img/prod-victory.jpg" alt=""><b>Знамя Победы</b><span>990 ₽</span><em>В наличии</em></div>
+            <div class="oa-card"><img src="img/prod-desk.jpg" alt=""><b>Флажки настольные</b><span>от 210 ₽</span><em>В наличии</em></div>
+            <div class="oa-card"><img src="img/prod-stand.jpg" alt=""><b>Флагшток напольный</b><span>от 4 900 ₽</span><em>2 дня</em></div>
+          </div>
+
+          <div class="pin pin-green" style="left:600px;top:88px">Цена за 5 секунд — без звонка</div>
+          <div class="pin pin-green" style="left:60px;top:468px">Товары с ценами = цена в сниппете Яндекса</div>
+        </div></div>
+      </div>
+
+      <div class="ba-handle" id="baHandle"><span>‹ ›</span></div>
+      <div class="ba-label left">ДО</div>
+      <div class="ba-label right">ПОСЛЕ</div>
+    </div>
+
+    <div class="ba-legend">
+      <div class="rv" style="--d:.3s"><span class="dot red"></span>Только «заявки» и «рассчитаем за 15 минут» · поп-ап закрывает первый экран · товары без цен</div>
+      <div class="rv" style="--d:.4s"><span class="dot green"></span>Цена и наличие сразу · мгновенный расчёт = заявка · Product-разметка даёт цену в сниппете Яндекса</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5b. СИСТЕМА ЭКРАНОВ ================= -->
+<section class="slide" data-dot="Экраны концепта">
+  <div class="wrap">
+    <h2 class="rv">Концепт — это <span class="accent-text">система экранов</span>, не картинка</h2>
+    <p class="lead rv" style="--d:.1s">Три ключевых шаблона, из которых собирается весь сайт: категория, товар, мобильная версия.</p>
+
+    <div class="shots">
+
+      <!-- КАТЕГОРИЯ -->
+      <div class="shot rv" style="--d:.15s">
+        <div class="shot-label">Категория · «Флаги на заказ»</div>
+        <div class="shot-body">
+          <div class="sh-top"><span class="sh-logo">Pro<i>ФЛАГ</i></span><span class="sh-phone">8 800 100-10-18</span></div>
+          <div class="sh-crumb">Каталог / Флаги</div>
+          <div class="sh-title">Флаги на заказ <em>142 товара</em></div>
+          <div class="sh-chips"><span class="act">Все</span><span>С логотипом</span><span>РФ и города</span><span>Знамёна</span><span>От 1 дня</span></div>
+          <div class="sh-tiles">
+            <div class="sh-tile"><img src="img/prod-rf.jpg" alt=""><b>Флаг РФ 90×135</b><span>1 150 ₽</span></div>
+            <div class="sh-tile"><img src="img/prod-victory.jpg" alt=""><b>Знамя Победы</b><span>990 ₽</span></div>
+            <div class="sh-tile"><img src="img/prod-desk.jpg" alt=""><b>Флажки настольные</b><span>от 210 ₽</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- КАРТОЧКА ТОВАРА -->
+      <div class="shot rv" style="--d:.3s">
+        <div class="shot-label">Карточка товара · цена в сниппете</div>
+        <div class="shot-body sh-product">
+          <div class="sh-top"><span class="sh-logo">Pro<i>ФЛАГ</i></span><span class="sh-phone">8 800 100-10-18</span></div>
+          <div class="sh-pwrap">
+            <img class="sh-photo" src="img/prod-rf.jpg" alt="">
+            <div class="sh-info">
+              <div class="sh-name">Флаг России 90×135 см</div>
+              <div class="sh-rate">★★★★★ <em>4,9 · 61 отзыв</em></div>
+              <div class="sh-price">1 150 ₽ <s>1 340 ₽</s></div>
+              <div class="sh-stock">В наличии · отгрузка сегодня</div>
+              <div class="sh-btns"><span class="sh-buy">Быстрый заказ</span><span class="sh-cart">В корзину</span></div>
+              <div class="sh-params"><div><span>Ткань</span><em>полиэфирный шёлк</em></div><div><span>Печать</span><em>сублимация, 1440 dpi</em></div><div><span>Срок</span><em>от 5 часов</em></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- МОБИЛЬНАЯ -->
+      <div class="shot rv" style="--d:.45s">
+        <div class="shot-label">Мобильная версия · 70% трафика</div>
+        <div class="shot-body sh-mob-wrap">
+          <div class="sh-phone-frame">
+            <div class="sh-mhead"><span class="sh-logo">Pro<i>ФЛАГ</i></span><span class="sh-burger">≡</span></div>
+            <div class="sh-mhero">Флаги на заказ<br><em>образец за 1 час</em></div>
+            <div class="sh-mprice">от 950 ₽/м²</div>
+            <span class="sh-mbtn">Рассчитать заказ</span>
+            <div class="sh-mtile"><img src="img/prod-rf.jpg" alt=""><div><b>Флаг РФ 90×135</b><span>1 150 ₽ · в наличии</span></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="foot-note rv" style="--d:.55s">Единая сетка и типографика · цены и наличие на каждом экране · микроразметка Product/Offer/FAQ для сниппетов · скорость: лёгкие страницы &lt;150 КБ.</p>
+  </div>
+</section>
+
+<!-- ================= 6. ПЛАН ================= -->
+<section class="slide" data-dot="План 90 дней">
+  <div class="wrap">
+    <h2 class="rv">План на 90 дней <span class="muted">— от быстрых побед к системному росту</span></h2>
+    <div class="timeline">
+      <div class="phase rv" style="--d:.15s">
+        <div class="ph-dot"></div>
+        <div class="ph-days">Дни 1–14</div>
+        <h3>Быстрые победы</h3>
+        <ul>
+          <li>Починить print-поддомен и меню</li>
+          <li>Открыть картинки в robots.txt</li>
+          <li>Реквизиты ООО + OG-теги</li>
+          <li>Кнопки WhatsApp/Telegram</li>
+          <li>Titles/H1 топ-10 категорий</li>
+        </ul>
+        <div class="ph-result">→ первые лиды через 2–3 недели</div>
+      </div>
+      <div class="phase rv" style="--d:.3s">
+        <div class="ph-dot"></div>
+        <div class="ph-days">Дни 15–30</div>
+        <h3>Упаковка</h3>
+        <ul>
+          <li>Калькулятор цены онлайн</li>
+          <li>Карточки товаров с наличием</li>
+          <li>Уникальные тексты топ-20 категорий</li>
+          <li>Отзывы Яндекс.Карт на сайте</li>
+          <li>Страница «Госзаказ 44-ФЗ»</li>
+        </ul>
+        <div class="ph-result">→ вход в розничную и B2B выдачу</div>
+      </div>
+      <div class="phase rv" style="--d:.45s">
+        <div class="ph-dot"></div>
+        <div class="ph-days">Дни 30–90</div>
+        <h3>Масштабирование</h3>
+        <ul>
+          <li>Ядро 500+ запросов в топ-10</li>
+          <li>Сезонный календарь (9 Мая, выборы…)</li>
+          <li>Яндекс.Директ на B2B-кластеры</li>
+          <li>Маркетплейсы: Ozon, WB, Я.Маркет</li>
+          <li>Ссылки и PR: кейсы Красной площади</li>
+        </ul>
+        <div class="ph-result">→ трафик ×1,5–2 и рост каждый месяц</div>
+      </div>
+    </div>
+    <div class="verdict rv" style="--d:.6s"><span class="v-icon">🎯</span><p>Каждый этап измерим: позиции по ядру, трафик в Метрике, лиды по каналам, ИКС. Отчёт — каждый месяц.</p></div>
+  </div>
+</section>
+
+<!-- ================= 7. ПРОГНОЗ ================= -->
+<section class="slide" data-dot="Прогноз">
+  <div class="wrap">
+    <h2 class="rv">Что будет через 12 месяцев <span class="muted">— если начать сейчас</span></h2>
+    <div class="forecast">
+      <div class="chart-card rv" style="--d:.15s">
+        <div class="chart-title">Органический трафик, индекс (сейчас = 100)</div>
+        <svg id="chart" viewBox="0 0 640 270">
+          <defs>
+            <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#3d7bfa" stop-opacity=".35"/>
+              <stop offset="100%" stop-color="#3d7bfa" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <g class="grid">
+            <line x1="30" y1="240" x2="610" y2="240"/><line x1="30" y1="173" x2="610" y2="173"/>
+            <line x1="30" y1="106" x2="610" y2="106"/><line x1="30" y1="39" x2="610" y2="39"/>
+          </g>
+          <g class="axis-y">
+            <text x="24" y="244">100</text><text x="24" y="177">200</text><text x="24" y="110">300</text><text x="24" y="43">400</text>
+          </g>
+          <g class="axis-x">
+            <text x="30" y="262">сейчас</text><text x="170" y="262">3 мес</text><text x="310" y="262">6 мес</text><text x="450" y="262">9 мес</text><text x="565" y="262">12 мес</text>
+          </g>
+          <path id="areaPath" fill="url(#areaFill)" opacity="0"></path>
+          <path id="linePath" fill="none" stroke="#3d7bfa" stroke-width="3.5" stroke-linecap="round"></path>
+          <g id="chartDots"></g>
+        </svg>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi rv" style="--d:.25s"><b data-count="4" data-prefix="×">×1</b><span>органический трафик</span></div>
+        <div class="kpi rv" style="--d:.35s"><b data-count="400" data-suffix="+">0</b><span>запросов в топ-10</span></div>
+        <div class="kpi rv" style="--d:.45s"><b data-count="200" data-prefix="+" data-suffix="%">+0%</b><span>заявок с сайта</span></div>
+        <div class="kpi rv" style="--d:.55s"><b data-count="400" data-suffix="+">0</b><span>ИКС Яндекса</span></div>
+      </div>
+    </div>
+    <p class="foot-note rv" style="--d:.65s">Прогноз основан на аудите: устранение технических потерь + ввод карточек с ценами + семантика из готового ядра (560+ запросов, 10 кластеров). Не гарантируется, а планируется — измеряем ежемесячно.</p>
+  </div>
+</section>
+
+<!-- ================= 8. ФИНАЛ ================= -->
+<section class="slide final" data-dot="Финал">
+  <canvas id="flagCanvas2" aria-hidden="true"></canvas>
+  <div class="hero-content">
+    <div class="kicker rv" style="--d:.1s">Всё уже готово к старту</div>
+    <h2 class="final-title rv" style="--d:.2s">Начнём с быстрых побед —<br><span class="accent">на этой неделе</span></h2>
+    <p class="hero-sub rv" style="--d:.3s">Четыре рабочих документа уже лежат у вас в проекте:</p>
+    <div class="chips rv" style="--d:.4s">
+      <span>📋 Полный аудит (12 разделов)</span>
+      <span>🗺 План на 90 дней — 30 задач</span>
+      <span>🛠 ТЗ разработчику</span>
+      <span>🔑 Семантическое ядро — 560+ запросов</span>
+    </div>
+    <div class="final-cta rv" style="--d:.55s">
+      <span class="btn-main">Утвердить план недели 1</span>
+      <span class="cta-note">Починка меню, robots.txt и реквизиты — 2 дня разработчика</span>
+    </div>
+    <div class="contacts rv" style="--d:.7s">
+      <span class="c-label">Ваш контакт для старта:</span>
+      <a class="c-phone" href="tel:+79250909500">+7 925 090-95-00</a>
+      <span class="c-extra">звоните · WhatsApp · Telegram</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
+ion>
+
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
