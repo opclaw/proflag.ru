@@ -5,6 +5,20 @@ const $  = (s,el)=> (el||document).querySelector(s);
 const $$ = (s,el)=> Array.from((el||document).querySelectorAll(s));
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+/* ---------- Масштабирование фиксированных макетов 1200×675 ---------- */
+function fitScaler(){
+  const ba=$('#baSlider'); if(!ba) return;
+  const fits=$$('.fit',ba);
+  const update=()=>{
+    const s=Math.min(ba.clientWidth/1200, ba.clientHeight/675);
+    fits.forEach(f=>{ f.style.transform=`translate(-50%,-50%) scale(${s})`; });
+  };
+  update();
+  addEventListener('resize',update,{passive:true});
+  if(window.ResizeObserver){ new ResizeObserver(update).observe(ba); }
+}
+fitScaler();
+
 /* ---------- Волновой флаг на canvas ---------- */
 function makeFlag(canvas){
   const ctx = canvas.getContext('2d');
@@ -19,7 +33,7 @@ function makeFlag(canvas){
     ctx.setTransform(dpr,0,0,dpr,0,0);
     draw(performance.now());
   }
-  function shade(hex,k){ // k in [-1..1] — осветлить/затемнить
+  function shade(hex,k){
     const n=parseInt(hex.slice(1),16),r=n>>16&255,g=n>>8&255,b=n&255;
     const f=v=>Math.max(0,Math.min(255,Math.round(v+(k>0?(255-v)*k:v*k))));
     return `rgb(${f(r)},${f(g)},${f(b)})`;
@@ -41,13 +55,11 @@ function makeFlag(canvas){
         ctx.fillRect(x, b0*H+y, step, (b1-b0)*H+1.6);
       }
     }
-    // виньетка для читаемости текста
     const g=ctx.createLinearGradient(0,0,0,H);
     g.addColorStop(0,'rgba(6,11,22,.58)');
     g.addColorStop(.45,'rgba(6,11,22,.34)');
     g.addColorStop(1,'rgba(6,11,22,.66)');
     ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
-    // тёмная подложка слева/по центру для текста
     const g2=ctx.createRadialGradient(W/2,H*.5,H*.2,W/2,H*.5,W*.75);
     g2.addColorStop(0,'rgba(6,11,22,.30)'); g2.addColorStop(1,'rgba(6,11,22,0)');
     ctx.fillStyle=g2; ctx.fillRect(0,0,W,H);
@@ -78,7 +90,7 @@ function animateCount(el){
   const dur=1300, t0=performance.now();
   (function tick(t){
     const p=Math.min(1,(t-t0)/dur);
-    const e=1-Math.pow(1-p,3); // easeOutCubic
+    const e=1-Math.pow(1-p,3);
     el.textContent=fmt(target*e);
     if(p<1) requestAnimationFrame(tick);
   })(t0);
@@ -86,7 +98,6 @@ function animateCount(el){
 
 /* ---------- Слайды: reveal + триггеры ---------- */
 const slides=$$('.slide');
-const once=(el,ev,fn)=>{ el.addEventListener(ev,fn,{once:true}); };
 
 const slideIO=new IntersectionObserver(es=>{
   es.forEach(e=>{
@@ -95,7 +106,7 @@ const slideIO=new IntersectionObserver(es=>{
     if(!s.classList.contains('on')){
       s.classList.add('on');
       $$('[data-count]',s).forEach(animateCount);
-      if(s.id==='baSlider' || $('#baSlider',s)) introSweep();
+      if($('#baSlider',s)) introSweep();
       if($('#chart',s)) drawChart();
     }
   });
@@ -108,7 +119,7 @@ slides.forEach((s,i)=>{
   const b=document.createElement('button');
   b.title=s.dataset.dot||('Слайд '+(i+1));
   b.setAttribute('aria-label',b.title);
-  b.addEventListener('click',()=>s.scrollIntoView({behavior:reduced?'auto':'smooth'}));
+  b.addEventListener('click',()=>{curIdx=i;s.scrollIntoView({behavior:reduced?'auto':'smooth'});});
   dotsBox.appendChild(b);
 });
 const dotBtns=$$('button',dotsBox);
@@ -134,8 +145,6 @@ document.addEventListener('keydown',e=>{
   if(e.key==='Home'){ e.preventDefault(); slides[0].scrollIntoView({behavior:'smooth'}); }
   if(e.key==='End'){ e.preventDefault(); slides[slides.length-1].scrollIntoView({behavior:'smooth'}); }
 });
-// отслеживаем текущий индекс для клавиатуры
-dotBtns.forEach((b,i)=>b.addEventListener('click',()=>{curIdx=i;}));
 
 /* ---------- Прогресс-бар ---------- */
 const pBar=$('#progressBar');
@@ -146,7 +155,7 @@ addEventListener('scroll',()=>{
 },{passive:true});
 
 /* ---------- Слайдер До/После ---------- */
-const ba=$('#baSlider'), handle=$('#baHandle');
+const ba=$('#baSlider');
 function setPos(p){ p=Math.max(5,Math.min(95,p)); ba.style.setProperty('--pos',p+'%'); }
 let dragging=false;
 function posFromEvent(e){
@@ -157,7 +166,6 @@ function posFromEvent(e){
 ba.addEventListener('pointerdown',e=>{ dragging=true; ba.setPointerCapture(e.pointerId); setPos(posFromEvent(e)); });
 ba.addEventListener('pointermove',e=>{ if(dragging) setPos(posFromEvent(e)); });
 addEventListener('pointerup',()=>dragging=false);
-// подсказка-прокрутка при первом появлении
 let swept=false;
 function introSweep(){
   if(swept||reduced) return; swept=true;
@@ -172,7 +180,6 @@ function drawChart(){
   const data=[100,103,118,142,170,205,245,290,330,368,400];
   const x0=30,x1=590,yBase=240,scale=(240-40)/(420-90);
   const pts=data.map((v,i)=>[x0+(x1-x0)*i/(data.length-1), yBase-(v-90)*scale]);
-  // сглаженная кривая (кривые Безье через середины)
   let d=`M${pts[0][0]},${pts[0][1]}`;
   for(let i=1;i<pts.length;i++){
     const [px,py]=pts[i-1],[cx,cy]=pts[i];
