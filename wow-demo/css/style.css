@@ -173,27 +173,42 @@ h2 .accent-text{background:var(--grad);-webkit-background-clip:text;background-c
 .pin-green::before{background:#17b877}
 
 /* ================================================= */
-/* ============ МОК «ДО» — текущий сайт ============ */
+/* ============ МОК «ДО» — реконструкция ============ */
 /* ================================================= */
-.mock-before{background:#eef0f4}
-.ob-body{position:absolute;inset:0}
-.ob-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(.97) brightness(.98)}
-.ob-veil{position:absolute;inset:0;background:rgba(238,241,246,.4)}
+.mock-before{background:#fff;color:#1f2937}
+.ob-body{position:absolute;inset:0;display:flex;flex-direction:column}
 
-.ob-top{position:absolute;top:0;left:0;right:0;height:58px;background:#fff;border-bottom:1px solid #e5e8ee;
-  display:flex;align-items:center;gap:22px;padding:0 40px;box-shadow:0 2px 14px rgba(20,30,50,.06)}
+.ob-top{height:52px;display:flex;align-items:center;gap:16px;padding:0 36px;border-bottom:1px solid #e8ebf1;flex-shrink:0}
 .ob-logo{font-size:19px;font-weight:900;color:#1a2b57}
-.ob-nav{flex:1;font-size:12.5px;color:#6b7787}
-.ob-phone{font-size:13px;font-weight:700;color:#1a2b57}
-.ob-cta{background:#2f6fed;color:#fff;font-size:12px;font-weight:700;padding:9px 18px;border-radius:7px}
+.ob-slogan{flex:1;font-size:11px;color:#8a94a6;line-height:1.3}
+.ob-tel{font-size:12.5px;font-weight:700;color:#1a2b57}
+.ob-cta{background:#fff;border:1.5px solid #2f6fed;color:#2f6fed;font-size:11.5px;font-weight:700;padding:8px 16px;border-radius:7px}
 
-.ob-mid{position:absolute;left:60px;top:186px;width:560px}
-.ob-h1{font-size:46px;font-weight:900;color:#1a2b57;letter-spacing:-.01em;text-shadow:0 1px 0 #fff}
-.ob-sub{margin-top:14px;font-size:15px;color:#3f4a5c;line-height:1.55;font-weight:500}
-.ob-btn{display:inline-block;margin-top:26px;background:#c2344a;color:#fff;font-size:13.5px;font-weight:700;padding:13px 32px;border-radius:7px;box-shadow:0 6px 18px rgba(160,40,60,.25)}
+.ob-hero{flex:1;display:flex;align-items:center;gap:24px;padding:0 36px;min-height:0}
+.ob-left{width:520px;flex-shrink:0}
+.ob-h1{font-size:24px;font-weight:800;color:#333f52;line-height:1.4}
+.ob-btn{display:inline-block;margin-top:18px;background:#c2344a;color:#fff;font-size:12.5px;font-weight:700;padding:11px 28px;border-radius:6px}
+.ob-note{margin-top:14px;font-size:11.5px;color:#6b7787}
+.ob-note b{color:#1d4ed8}
+.ob-circles{flex:1;display:grid;grid-template-columns:repeat(2,138px);gap:18px 24px;justify-content:center}
+.ob-circ{display:flex;flex-direction:column;align-items:center;gap:7px}
+.ob-circ img{width:120px;height:120px;border-radius:50%;object-fit:cover;box-shadow:0 10px 26px rgba(20,30,50,.16)}
+.ob-circ span{font-size:12px;font-weight:700;color:#3a4658}
 
-.ob-bar{position:absolute;bottom:0;left:0;right:0;height:46px;background:#eaf1ff;border-top:1px solid #d8e4fa;
-  display:flex;align-items:center;justify-content:center;color:#1d4ed8;font-size:12.5px;font-weight:600}
+.ob-stats{height:54px;display:flex;align-items:center;border-top:1px solid #eef1f5;border-bottom:1px solid #eef1f5;flex-shrink:0;background:#fafbfd}
+.ob-stats div{flex:1;display:flex;flex-direction:column;align-items:center;gap:1px;border-right:1px solid #eef1f5}
+.ob-stats div:last-child{border-right:none}
+.ob-stats b{font-size:13px;font-weight:800;color:#1a2b57}
+.ob-stats span{font-size:9px;color:#98a2b3}
+
+.ob-pop{padding:12px 36px 14px;flex-shrink:0}
+.ob-head{display:flex;align-items:baseline;justify-content:space-between;font-size:15px;font-weight:800;color:#333f52;margin-bottom:9px}
+.ob-head em{font-style:normal;font-size:10px;font-weight:700;color:#2f6fed;letter-spacing:.06em}
+.ob-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ob-card{border:1px solid #e8ebf1;border-radius:9px;padding:9px;display:flex;flex-direction:column;align-items:center;gap:5px}
+.ob-card img{width:100%;height:56px;object-fit:cover;border-radius:6px}
+.ob-card b{font-size:11.5px;font-weight:700;color:#3a4658}
+.ob-card span{font-size:10px;font-weight:700;color:#fff;background:#c2344a;border-radius:5px;padding:4px 16px}
 
 .ob-overlay{position:absolute;inset:0;background:rgba(15,21,36,.55);display:flex;align-items:center;justify-content:center;z-index:4}
 .ob-modal{position:relative;width:330px;background:#fff;border-radius:14px;box-shadow:0 30px 80px rgba(4,8,18,.5);padding:22px 26px 22px;display:flex;flex-direction:column;gap:8px}
@@ -217,7 +232,8 @@ h2 .accent-text{background:var(--grad);-webkit-background-clip:text;background-c
 
 .oa-top{position:absolute;top:0;left:0;right:0;height:62px;display:flex;align-items:center;gap:24px;padding:0 44px;
   background:rgba(8,13,25,.32);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.09)}
-.oa-logo{font-size:19px;font-weight:900;color:#fff}
+.oa-logo{font-size:19px;font-weight:900;color:#fff;display:flex;align-items:center;gap:8px}
+.oa-mark{width:17px;height:20px;flex-shrink:0;filter:drop-shadow(0 2px 4px rgba(0,0,0,.4))}
 .oa-logo i{font-style:normal;color:#ff6273}
 .oa-nav{flex:1;font-size:12.5px;color:rgba(232,239,250,.72)}
 .oa-nav b{color:#fff;font-weight:800}
@@ -252,6 +268,59 @@ h2 .accent-text{background:var(--grad);-webkit-background-clip:text;background-c
 .oa-card b{font-size:13px;font-weight:800;color:#101828;line-height:1.25}
 .oa-card span{font-size:14px;font-weight:900;color:#12805c}
 .oa-card em{font-style:normal;font-size:9.5px;font-weight:700;color:#0f8f5f;background:rgba(46,204,143,.13);padding:3px 9px;border-radius:100px}
+
+/* ============ СИСТЕМА ЭКРАНОВ (мини-макеты) ============ */
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:960px){.shots{grid-template-columns:1fr}}
+.shot{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 18px 50px rgba(3,7,16,.45);border:1px solid #26324f}
+.shot-label{background:#0e1730;color:#9fb2d8;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:10px 16px}
+.shot-body{position:relative;height:296px;background:#f6f8fb;color:#101828;overflow:hidden;font-size:11px}
+
+.sh-top{height:34px;background:#fff;border-bottom:1px solid #e8ecf2;display:flex;align-items:center;justify-content:space-between;padding:0 14px}
+.sh-logo{font-size:13px;font-weight:900;color:#0e1730}
+.sh-logo i{font-style:normal;color:#e0384a}
+.sh-phone{font-size:10.5px;font-weight:800;color:#0e1730}
+.sh-crumb{padding:9px 14px 0;font-size:9.5px;color:#98a2b3}
+.sh-title{padding:3px 14px 7px;font-size:17px;font-weight:900;color:#0e1730}
+.sh-title em{font-style:normal;font-size:10px;font-weight:600;color:#98a2b3;margin-left:6px}
+.sh-chips{display:flex;gap:5px;padding:0 14px 10px;flex-wrap:wrap}
+.sh-chips span{font-size:9.5px;font-weight:700;color:#475467;border:1px solid #dfe4ec;border-radius:100px;padding:4px 10px;background:#fff}
+.sh-chips .act{background:#0e1730;color:#fff;border-color:#0e1730}
+.sh-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 14px}
+.sh-tile{background:#fff;border:1px solid #e8ecf2;border-radius:9px;padding:7px;display:flex;flex-direction:column;gap:4px}
+.sh-tile img{width:100%;height:74px;object-fit:cover;border-radius:6px}
+.sh-tile b{font-size:9.5px;font-weight:700;color:#101828;line-height:1.25}
+.sh-tile span{font-size:11px;font-weight:900;color:#12805c}
+
+.sh-product .sh-pwrap{display:flex;gap:12px;padding:12px 14px}
+.sh-photo{width:150px;height:180px;object-fit:cover;border-radius:10px;box-shadow:0 8px 22px rgba(16,24,40,.14)}
+.sh-info{flex:1;display:flex;flex-direction:column;gap:5px;min-width:0}
+.sh-name{font-size:15px;font-weight:900;color:#0e1730;line-height:1.2}
+.sh-rate{font-size:10px;color:#f0a411;letter-spacing:1px}
+.sh-rate em{font-style:normal;color:#98a2b3;letter-spacing:0;margin-left:4px}
+.sh-price{font-size:21px;font-weight:900;color:#0e1730}
+.sh-price s{font-size:12px;color:#c0c7d2;font-weight:600;margin-left:5px}
+.sh-stock{font-size:9.5px;font-weight:700;color:#0f8f5f;background:rgba(46,204,143,.13);align-self:flex-start;padding:3px 9px;border-radius:100px}
+.sh-btns{display:flex;gap:6px;margin-top:3px}
+.sh-buy{background:#e0384a;color:#fff;font-size:10px;font-weight:800;padding:8px 14px;border-radius:7px}
+.sh-cart{border:1.5px solid #d5dae2;color:#0e1730;font-size:10px;font-weight:800;padding:7px 12px;border-radius:7px;background:#fff}
+.sh-params{margin-top:4px;display:flex;flex-direction:column;gap:3px}
+.sh-params div{display:flex;justify-content:space-between;font-size:9px;color:#8a94a6;border-bottom:1px dashed #edf0f4;padding-bottom:2px}
+.sh-params em{font-style:normal;font-weight:700;color:#101828}
+
+.sh-mob-wrap{display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#eef1f7,#dfe5ef)}
+.sh-phone-frame{width:172px;height:268px;background:#fff;border-radius:18px;border:5px solid #101828;box-shadow:0 14px 34px rgba(16,24,40,.3);overflow:hidden;display:flex;flex-direction:column}
+.sh-mhead{height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 10px;border-bottom:1px solid #eef1f5}
+.sh-mhead .sh-logo{font-size:11px}
+.sh-burger{font-size:14px;color:#0e1730;font-weight:800}
+.sh-mhero{padding:14px 10px 0;font-size:15px;font-weight:900;color:#0e1730;line-height:1.2}
+.sh-mhero em{font-style:normal;display:block;font-size:9.5px;color:#475467;font-weight:600;margin-top:4px}
+.sh-mprice{padding:8px 10px 0;font-size:11px;font-weight:800;color:#1d4ed8}
+.sh-mbtn{margin:9px 10px 0;background:#e0384a;color:#fff;text-align:center;font-size:10px;font-weight:800;padding:9px 0;border-radius:8px}
+.sh-mtile{margin:10px 10px 0;border:1px solid #e8ecf2;border-radius:9px;padding:7px;display:flex;gap:8px;align-items:center}
+.sh-mtile img{width:52px;height:38px;object-fit:cover;border-radius:6px}
+.sh-mtile b{display:block;font-size:9.5px;color:#101828}
+.sh-mtile span{font-size:9px;color:#12805c;font-weight:700}
 
 /* ============ TIMELINE ============ */
 .timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative;margin-top:10px}

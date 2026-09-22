@@ -173,29 +173,59 @@
 <!-- ================= 5. ДО / ПОСЛЕ ================= -->
 <section class="slide" data-dot="До / После">
   <div class="wrap wide-wrap">
-    <h2 class="rv">Как это может выглядеть <span class="accent-text">уже через месяц</span></h2>
-    <p class="lead rv" style="--d:.1s">Потяните ползунок — слева первый экран сейчас, справа концепт главной страницы.</p>
+    <h2 class="rv">Первый экран: сейчас и <span class="accent-text">концепт</span></h2>
+    <p class="lead rv" style="--d:.1s">Потяните ползунок. Слева — текущий первый экран proflag.ru (реконструкция по живой странице), справа — концепт главной.</p>
 
     <div class="ba rv" id="baSlider" style="--d:.2s">
       <div class="ba-layer ba-before">
         <div class="fit"><div class="mock mock-before">
           <div class="ob-body">
-            <img class="ob-photo" src="img/before-factory.jpg" alt="">
-            <div class="ob-veil"></div>
+
+            <!-- шапка -->
             <div class="ob-top">
               <span class="ob-logo">ProФЛАГ</span>
-              <span class="ob-nav">Каталог · О компании · Доставка · Контакты</span>
-              <span class="ob-phone">+7 (495) 128-10-18</span>
+              <span class="ob-slogan">Производственная компания текстильной продукции</span>
+              <span class="ob-tel">+7 (495) 128-10-18</span>
               <span class="ob-cta">Оставить заявку</span>
             </div>
-            <div class="ob-mid">
-              <div class="ob-h1">ПРОФЛАГ</div>
-              <div class="ob-sub">Производим текстильную продукцию<br>по вашим эскизам и доставляем по всему миру</div>
-              <span class="ob-btn">Оставить заявку</span>
+
+            <!-- герой: текст + 4 круга -->
+            <div class="ob-hero">
+              <div class="ob-left">
+                <div class="ob-h1">Производим текстильную продукцию по вашим эскизам и доставляем по всему миру</div>
+                <span class="ob-btn">Оставить заявку</span>
+                <div class="ob-note">Оставьте заявку и мы <b>рассчитаем за 15 минут</b> стоимость заказа</div>
+              </div>
+              <div class="ob-circles">
+                <div class="ob-circ"><img src="img/prod-rf.jpg" alt=""><span>Флаги</span></div>
+                <div class="ob-circ"><img src="img/prod-banner.jpg" alt=""><span>Баннеры</span></div>
+                <div class="ob-circ"><img src="img/prod-pillow.jpg" alt=""><span>Подушки</span></div>
+                <div class="ob-circ"><img src="img/prod-tshirt.jpg" alt=""><span>Одежда</span></div>
+              </div>
             </div>
-            <div class="ob-bar">Рассчитаем стоимость заказа за 15 минут&nbsp;&nbsp;·&nbsp;&nbsp;Доставим в любую точку России&nbsp;&nbsp;·&nbsp;&nbsp;Самовывоз из офиса в Москве</div>
+
+            <!-- цифры -->
+            <div class="ob-stats">
+              <div><b>20 лет</b><span>на рынке</span></div>
+              <div><b>1 час</b><span>опытный образец</span></div>
+              <div><b>75 000</b><span>товаров в месяц</span></div>
+              <div><b>Доставка</b><span>в любую точку мира</span></div>
+              <div><b>Своё</b><span>производство</span></div>
+            </div>
+
+            <!-- популярная продукция -->
+            <div class="ob-pop">
+              <div class="ob-head">Популярная продукция <em>ВСЯ ПРОДУКЦИЯ</em></div>
+              <div class="ob-row">
+                <div class="ob-card"><img src="img/prod-rf.jpg" alt=""><b>Флаги</b><span>Заказать</span></div>
+                <div class="ob-card"><img src="img/prod-victory.jpg" alt=""><b>Знамена</b><span>Заказать</span></div>
+                <div class="ob-card"><img src="img/prod-tshirt.jpg" alt=""><b>Одежда</b><span>Заказать</span></div>
+                <div class="ob-card"><img src="img/prod-pillow.jpg" alt=""><b>Для интерьера</b><span>Заказать</span></div>
+              </div>
+            </div>
           </div>
 
+          <!-- поп-ап -->
           <div class="ob-overlay">
             <div class="ob-modal">
               <span class="ob-x">×</span>
@@ -209,8 +239,8 @@
             </div>
           </div>
 
-          <div class="pin pin-red" style="left:56px;top:168px">Ни товара, ни цены на первом экране</div>
-          <div class="pin pin-red" style="left:788px;top:214px">Форма закрывает весь сайт</div>
+          <div class="pin pin-red" style="left:44px;top:468px">Ни одной цены — только «Заказать»</div>
+          <div class="pin pin-red" style="left:792px;top:128px">Поп-ап встречает посетителя</div>
         </div></div>
       </div>
 
@@ -220,7 +250,10 @@
             <img class="oa-photo" src="img/hero-flags.jpg" alt="">
             <div class="oa-grad"></div>
             <div class="oa-top">
-              <span class="oa-logo">Pro<i>ФЛАГ</i></span>
+              <span class="oa-logo">
+                <svg class="oa-mark" viewBox="0 0 22 26" aria-hidden="true"><path d="M3 2 C 9 0, 14 4, 20 2 L 20 12 C 14 14, 9 10, 3 12 Z" fill="#f4f6fb"/><path d="M3 6 C 9 4, 14 8, 20 6 L 20 9 C 14 11, 9 7, 3 9 Z" fill="#2e5fa3" opacity=".001"/><rect x="1.4" y="1" width="1.7" height="24" rx=".8" fill="#8fa0c2"/></svg>
+                Pro<i>ФЛАГ</i>
+              </span>
               <span class="oa-nav">Каталог · <b>Цены</b> · Доставка · Госзаказ · Кейсы</span>
               <span class="oa-phone">8 800 100-10-18</span>
               <span class="oa-cta">Рассчитать заказ</span>
@@ -260,9 +293,72 @@
     </div>
 
     <div class="ba-legend">
-      <div class="rv" style="--d:.3s"><span class="dot red"></span>Первый экран без товаров и цен · поп-ап закрывает контент · «рассчитаем за 15 минут» вместо ответа</div>
-      <div class="rv" style="--d:.4s"><span class="dot green"></span>Цена и наличие сразу · мгновенный расчёт = заявка · Product-разметка даёт цену прямо в сниппете Яндекса</div>
+      <div class="rv" style="--d:.3s"><span class="dot red"></span>Только «заявки» и «рассчитаем за 15 минут» · поп-ап закрывает первый экран · товары без цен</div>
+      <div class="rv" style="--d:.4s"><span class="dot green"></span>Цена и наличие сразу · мгновенный расчёт = заявка · Product-разметка даёт цену в сниппете Яндекса</div>
     </div>
+  </div>
+</section>
+
+<!-- ================= 5b. СИСТЕМА ЭКРАНОВ ================= -->
+<section class="slide" data-dot="Экраны концепта">
+  <div class="wrap">
+    <h2 class="rv">Концепт — это <span class="accent-text">система экранов</span>, не картинка</h2>
+    <p class="lead rv" style="--d:.1s">Три ключевых шаблона, из которых собирается весь сайт: категория, товар, мобильная версия.</p>
+
+    <div class="shots">
+
+      <!-- КАТЕГОРИЯ -->
+      <div class="shot rv" style="--d:.15s">
+        <div class="shot-label">Категория · «Флаги на заказ»</div>
+        <div class="shot-body">
+          <div class="sh-top"><span class="sh-logo">Pro<i>ФЛАГ</i></span><span class="sh-phone">8 800 100-10-18</span></div>
+          <div class="sh-crumb">Каталог / Флаги</div>
+          <div class="sh-title">Флаги на заказ <em>142 товара</em></div>
+          <div class="sh-chips"><span class="act">Все</span><span>С логотипом</span><span>РФ и города</span><span>Знамёна</span><span>От 1 дня</span></div>
+          <div class="sh-tiles">
+            <div class="sh-tile"><img src="img/prod-rf.jpg" alt=""><b>Флаг РФ 90×135</b><span>1 150 ₽</span></div>
+            <div class="sh-tile"><img src="img/prod-victory.jpg" alt=""><b>Знамя Победы</b><span>990 ₽</span></div>
+            <div class="sh-tile"><img src="img/prod-desk.jpg" alt=""><b>Флажки настольные</b><span>от 210 ₽</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- КАРТОЧКА ТОВАРА -->
+      <div class="shot rv" style="--d:.3s">
+        <div class="shot-label">Карточка товара · цена в сниппете</div>
+        <div class="shot-body sh-product">
+          <div class="sh-top"><span class="sh-logo">Pro<i>ФЛАГ</i></span><span class="sh-phone">8 800 100-10-18</span></div>
+          <div class="sh-pwrap">
+            <img class="sh-photo" src="img/prod-rf.jpg" alt="">
+            <div class="sh-info">
+              <div class="sh-name">Флаг России 90×135 см</div>
+              <div class="sh-rate">★★★★★ <em>4,9 · 61 отзыв</em></div>
+              <div class="sh-price">1 150 ₽ <s>1 340 ₽</s></div>
+              <div class="sh-stock">В наличии · отгрузка сегодня</div>
+              <div class="sh-btns"><span class="sh-buy">Быстрый заказ</span><span class="sh-cart">В корзину</span></div>
+              <div class="sh-params"><div><span>Ткань</span><em>полиэфирный шёлк</em></div><div><span>Печать</span><em>сублимация, 1440 dpi</em></div><div><span>Срок</span><em>от 5 часов</em></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- МОБИЛЬНАЯ -->
+      <div class="shot rv" style="--d:.45s">
+        <div class="shot-label">Мобильная версия · 70% трафика</div>
+        <div class="shot-body sh-mob-wrap">
+          <div class="sh-phone-frame">
+            <div class="sh-mhead"><span class="sh-logo">Pro<i>ФЛАГ</i></span><span class="sh-burger">≡</span></div>
+            <div class="sh-mhero">Флаги на заказ<br><em>образец за 1 час</em></div>
+            <div class="sh-mprice">от 950 ₽/м²</div>
+            <span class="sh-mbtn">Рассчитать заказ</span>
+            <div class="sh-mtile"><img src="img/prod-rf.jpg" alt=""><div><b>Флаг РФ 90×135</b><span>1 150 ₽ · в наличии</span></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="foot-note rv" style="--d:.55s">Единая сетка и типографика · цены и наличие на каждом экране · микроразметка Product/Offer/FAQ для сниппетов · скорость: лёгкие страницы &lt;150 КБ.</p>
   </div>
 </section>
 
@@ -379,6 +475,13 @@
     </div>
   </div>
 </section>
+
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
+ion>
 
 </main>
 
