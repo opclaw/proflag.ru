@@ -1,2 +1,6 @@
 # промежуточные растры слайдов (генерируются build.py)
 client-pdf/slides/
+
+# кэш Python
+__pycache__/
+*.pyc
