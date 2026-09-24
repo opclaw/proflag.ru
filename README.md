@@ -5,7 +5,6 @@
 ## Документы
 
 - [client-pdf/PROFLAG-audit-klientu.pdf](client-pdf/PROFLAG-audit-klientu.pdf) — **презентация для клиента**: 13 слайдов 16:9 на белом фоне, без технической «кухни»; PDF плоский (растр) и закрыт от правок/копирования паролем владельца (см. [client-pdf/README.md](client-pdf/README.md))
-
 - [audit/report.md](audit/report.md) — **главный отчёт**: диагностика, топ-10 проблем, конкурентный анализ, стратегия, KPI
 - [audit/action-plan-90-days.md](audit/action-plan-90-days.md) — план работ на 90 дней с приоритетами и контент-планом
 - [audit/technical-tasks.md](audit/technical-tasks.md) — ТЗ разработчику (robots, OG/schema, скорость, каталог)
